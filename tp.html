@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des tâches</title>
+    <style>
+        code{
+            
+            border: none;
+            padding: 50px auto;
+            text-align: center;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titre">Bienvenue dans la gestion des tâches</h1>
+    <p id="paragraphe">Bienvenue sur notre application de gestion des tâches. Cliquez sur les boutons ci-dessous pour interagir avec la page.</p>
+    <button id="changerTexte">Changer le texte</button>
+    <button id="changerCouleur">Changer la couleur du titre</button>
+
+    <pre>
+        <code>
+            
+                // Sélection des éléments dans le DOM
+                const titre = document.getElementById('titre');
+                const paragraphe = document.getElementById('paragraphe');
+                const boutonChangerTexte = document.getElementById('changerTexte');
+                const boutonChangerCouleur = document.getElementById('changerCouleur');
+        
+                let changePara = ()=>{
+                    paragraphe.textContent = 'Nouveau texte pour le paragraphe';
+                }
+                let changetitreColor =()=>{
+                    const color =["#f58a6e","#7beca4","#51395a","#004c9b"]
+                    const randomColor = color[Math.floor(Math.random() * color.length)];
+                    titre.style.color = randomColor;
+                }
+                boutonChangerTexte.addEventListener('click', changePara);
+                boutonChangerCouleur.addEventListener('click', changetitreColor);
+            
+        </code>
+    </pre>
+
+
+    <script>
+        // Sélection des éléments dans le DOM
+        const titre = document.getElementById('titre');
+        const paragraphe = document.getElementById('paragraphe');
+        const boutonChangerTexte = document.getElementById('changerTexte');
+        const boutonChangerCouleur = document.getElementById('changerCouleur');
+
+        let changePara = ()=>{
+            paragraphe.textContent = 'Nouveau texte pour le paragraphe';
+        }
+        let changetitreColor =()=>{
+            const color =["#f58a6e","#7beca4","#51395a","#004c9b"]
+            const randomColor = color[Math.floor(Math.random() * color.length)];
+            titre.style.color = randomColor;
+        }
+        boutonChangerTexte.addEventListener('click', changePara);
+        boutonChangerCouleur.addEventListener('click', changetitreColor);
+    </script>
+</body>
+</html>
